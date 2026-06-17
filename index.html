@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Teclado , HTML, CSS">
+    <meta name="description" content="Teclado em HTML e CSS.">
+    <meta name="author" content="Luana Rocha Miron">
+    <meta name="robots" content="index,follow">
+    <meta name="X-UA-Compatible" content="IE=7">
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Teclado</title>
+</head>
+<body>
+      <div class="container">
+         <form class="wrapper" name="form">
+            <div class="display">
+               <textarea name="textarea" cols="30" rows="10"></textarea>
+            </div>
+            <div class="keys">
+               <input type="button" value="Q" name="q" onclick="disp(q.value)">
+               <input type="button" value="W" name="w" onclick="disp(w.value)">
+               <input type="button" value="E" name="e" onclick="disp(e.value)">
+               <input type="button" value="R" name="r" onclick="disp(r.value)">
+               <input type="button" value="T" name="t" onclick="disp(t.value)">
+               <input type="button" value="Y" name="y" onclick="disp(y.value)">
+               <input type="button" value="U" name="u" onclick="disp(u.value)">
+               <input type="button" value="I" name="i" onclick="disp(i.value)">
+               <input type="button" value="O" name="o " onclick="disp(o.value)">
+               <input type="button" value="P" name="p" onclick="disp(p.value)">
+            </div>
+            <div class="keys">
+               <input type="button" value="A" name="a" onclick="disp(a.name)">
+               <input type="button" value="S" name="s" onclick="disp(s.name)">
+               <input type="button" value="D" name="d" onclick="disp(d.name)">
+               <input type="button" value="F" name="f" onclick="disp(f.name)">
+               <input type="button" value="G" name="g" onclick="disp(g.name)">
+               <input type="button" value="H" name="h" onclick="disp(h.name)">
+               <input type="button" value="J" name="j" onclick="disp(j.name)">
+               <input type="button" value="K" name="k" onclick="disp(k.name)">
+               <input type="button" value="L" name="l" onclick="disp(l.name)">
+            </div>
+
+            <div class="keys">
+               <input type="button" value="Z" name="z" onclick="disp(z.name)">
+               <input type="button" value="X" name="x" onclick="disp(x.name)">
+               <input type="button" value="C" name="c" onclick="disp(c.name)">
+               <input type="button" value="V" name="v" onclick="disp(v.name)">
+               <input type="button" value="B" name="b" onclick="disp(b.name)">
+               <input type="button" value="N" name="n" onclick="disp(n.name)">
+               <input type="button" value="M" name="m" onclick="disp(m.name)">
+            </div>
+            <div class="keys">
+               <input type="button" id="space" value="SPACE">
+            </div>
+         </form>
+      </div>
+      <script>
+         const spaceBtn = document.querySelector("#space");
+         const display = document.querySelector(".display");
+
+         function disp(result){
+            form.textarea.value = form.textarea.value + result;
+            spaceBtn.onclick = (() =>{
+                form.textarea.value += " ";
+            });
+            display.ondblclick = (() =>{
+               form.textarea.value = "";
+            });
+         }
+      </script>
+   </body>
+</html>
